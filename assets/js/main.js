@@ -1,0 +1,72 @@
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('Fausha Store Loaded');
+
+    // Smooth Scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+
+        // Contact Form Logic (WhatsApp)
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', async function (e) {
+                e.preventDefault();
+
+                const name = this.querySelector('input[type="text"]').value;
+                const phone = this.querySelector('input[type="tel"]').value;
+                const message = this.querySelector('textarea').value;
+
+                if (!name || !phone || !message) {
+                    alert('Por favor completa todos los campos.');
+                    return;
+                }
+
+                const submitBtn = this.querySelector('button[type="submit"]');
+                const originalText = submitBtn.innerText;
+                submitBtn.innerText = 'Enviando...';
+                submitBtn.disabled = true;
+
+                // 1. Send Email (via Formspree)
+                // ⚠️ IMPORTANTE: Crea tu cuenta en https://formspree.io y reemplaza "TU_ID_AQUI" con el código que te den.
+                // Ejemplo: https://formspree.io/f/xyzmnpqr
+                const formspreeId = 'TU_ID_AQUI';
+
+                try {
+                    await fetch(`https://formspree.io/f/${formspreeId}`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ name, phone, message })
+                    });
+                } catch (error) {
+                    console.error('Error sending email:', error);
+                    // Continue to WhatsApp anyway
+                }
+
+                // 2. Open WhatsApp
+                const waNumber = '18294615951';
+                const text = `Hola Fausha Store, soy ${name} (${phone}). ${message}`;
+                const url = `https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`;
+
+                window.open(url, '_blank');
+
+                // Reset form
+                submitBtn.innerText = originalText;
+                submitBtn.disabled = false;
+                this.reset();
+            });
+        }
+
+        // Optional: Add simple scroll animation reveal here if needed in future
+    });
