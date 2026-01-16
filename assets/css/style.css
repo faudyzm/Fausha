@@ -91,6 +91,7 @@ nav {
     font-size: 1.8rem;
     font-weight: 700;
     background: var(--gradient-main);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     letter-spacing: -1px;
@@ -280,231 +281,527 @@ footer {
     color: var(--primary);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+/* Pricing Section - Desktop Styles */
+.pricing {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 100px 0;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.pricing-card {
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.pricing-card.featured {
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);
+    transform: scale(1.05);
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.pricing-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: #000;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.pricing-list {
+    list-style: none;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.pricing-list li {
+    margin-bottom: 10px;
+}
+
+.pricing-notes {
+    margin-top: 50px;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.pricing-notes-flex {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Industries Section */
+.industries-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.industry-card {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 25px;
+    border-radius: 15px;
+    transition: background 0.3s;
+}
+
+.industry-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.industry-card.primary {
+    border-left: 3px solid var(--primary);
+}
+
+.industry-card.secondary {
+    border-left: 3px solid var(--secondary);
+}
+
+/* Process Section */
+.process {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, transparent 100%);
+}
+
+.process-steps {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+    position: relative;
+}
+
+.step-item {
+    flex: 1;
+    min-width: 150px;
+}
+
+.step-number {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.step-number.active {
+    background: var(--primary);
+    color: #000;
+}
+
+.step-number.outline {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid var(--primary);
+    color: #fff;
+}
+
+.step-number.final {
+    background: var(--secondary);
+    color: #fff;
+}
+
+/* Contact Section */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 50px;
+}
+
+.whatsapp-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: opacity 0.3s;
+}
+
+.whatsapp-link:hover {
+    opacity: 0.8;
+}
+
+.whatsapp-icon-circle {
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 243, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+}
+
+.contact-form {
+    background: var(--bg-card);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus {
+    border-color: var(--primary);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE FIRST
+   ============================================ */
+
+/* Tablets and Small Laptops */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+
     .hero h1 {
-        font-size: 2.8rem;
+        font-size: 3.2rem;
+    }
+
+    .section-title h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+
+    /* Header & Navigation */
+    header {
+        padding: 10px 0;
     }
 
     .nav-links {
         display: none;
-        /* Mobile menu to be implemented if needed */
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .logo img {
+        height: 35px !important;
+    }
+
+    .logo span {
+        font-size: 1rem !important;
+    }
+
+    /* Hero Section */
+    section#inicio.hero,
+    .hero {
+        height: auto !important;
+        min-height: auto !important;
+        padding: 80px 0 80px !important;
+        display: flex !important;
+        align-items: flex-start !important;
+    }
+
+    section#inicio.hero .container,
+    .hero .container {
+        flex-direction: column !important;
+        gap: 30px !important;
+        display: flex !important;
+        align-items: stretch !important;
+    }
+
+    section#inicio.hero .hero-content,
+    .hero-content {
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        flex: none !important;
+    }
+
+    section#inicio.hero .hero-image,
+    .hero-image {
+        width: 100% !important;
+        min-width: 100% !important;
+        flex: none !important;
+        order: -1;
+        display: flex !important;
+        justify-content: center !important;
+    }
+
+    .hero-image img {
+        max-width: 85% !important;
+        height: auto !important;
+        margin: 0 auto;
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        margin-bottom: 30px;
+    }
+
+    .hero-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+    }
+
+    .btn {
+        padding: 15px 25px;
+        font-size: 0.95rem;
+        width: 100%;
+        text-align: center;
+        display: block;
     }
 
     .btn-outline {
-        margin-left: 0;
-        margin-top: 15px;
-        display: block;
-        text-align: center;
+        margin-left: 0 !important;
+        margin-top: 0;
+    }
 
-        /* Pricing Section */
-        .pricing {
-            background: rgba(0, 0, 0, 0.2);
-            padding: 100px 0;
-        }
+    /* Services Section */
+    .services {
+        padding: 50px 0;
+    }
 
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
 
-        .pricing-card {
-            background: var(--bg-card);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            text-align: center;
-            position: relative;
-            transition: transform 0.3s ease;
-        }
+    .service-card {
+        padding: 30px 25px;
+    }
 
-        .pricing-card.featured {
-            border: 1px solid var(--primary);
-            box-shadow: 0 0 20px rgba(0, 243, 255, 0.1);
-            transform: scale(1.05);
-        }
+    .icon {
+        font-size: 2rem;
+        padding: 12px;
+    }
 
-        .pricing-card:hover {
-            transform: translateY(-10px);
-        }
+    /* Section Titles */
+    .section-title {
+        margin-bottom: 40px;
+    }
 
-        .pricing-card.featured:hover {
-            transform: scale(1.05) translateY(-10px);
-        }
+    .section-title h2 {
+        font-size: 1.8rem;
+        line-height: 1.3;
+    }
 
-        .pricing-badge {
-            position: absolute;
-            top: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--primary);
-            color: #000;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-        }
+    .section-title p {
+        font-size: 0.85rem;
+    }
 
-        .price {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin: 20px 0;
-        }
+    /* Pricing Section */
+    .pricing {
+        padding: 60px 0;
+    }
 
-        .pricing-list {
-            list-style: none;
-            color: var(--text-muted);
-            margin-bottom: 30px;
-            text-align: left;
-            padding: 0 20px;
-        }
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
 
-        .pricing-list li {
-            margin-bottom: 10px;
-        }
+    .pricing-card {
+        padding: 35px 25px;
+        transform: none !important;
+    }
 
-        .pricing-notes {
-            margin-top: 50px;
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
+    .pricing-card.featured {
+        transform: none !important;
+    }
 
-        .pricing-notes-flex {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
+    .pricing-card:hover {
+        transform: translateY(-5px) !important;
+    }
 
-        /* Industries Section */
-        .industries-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
+    .price {
+        font-size: 2rem;
+    }
 
-        .industry-card {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 25px;
-            border-radius: 15px;
-            transition: background 0.3s;
-        }
+    .pricing-notes-flex {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
 
-        .industry-card:hover {
-            background: rgba(255, 255, 255, 0.06);
-        }
+    /* Industries Section */
+    .industries {
+        padding: 60px 0 !important;
+    }
 
-        .industry-card.primary {
-            border-left: 3px solid var(--primary);
-        }
+    .section-title h2 {
+        font-size: 2rem !important;
+    }
 
-        .industry-card.secondary {
-            border-left: 3px solid var(--secondary);
-        }
+    .section-title h3 {
+        font-size: 1rem !important;
+    }
 
-        /* Process Section */
-        .process {
-            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02) 0%, transparent 100%);
-        }
+    .industries-grid,
+    .grid-container {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
 
-        .process-steps {
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 20px;
-            text-align: center;
-            position: relative;
-        }
+    .industry-card {
+        padding: 25px 20px;
+    }
 
-        .step-item {
-            flex: 1;
-            min-width: 150px;
-        }
+    /* Why Us Section */
+    .why-us {
+        padding: 60px 0;
+    }
 
-        .step-number {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
+    .features-grid {
+        flex-direction: column;
+        gap: 30px;
+    }
 
-        .step-number.active {
-            background: var(--primary);
-            color: #000;
-        }
+    .feature-item {
+        max-width: 100%;
+    }
 
-        .step-number.outline {
-            background: rgba(255, 255, 255, 0.1);
-            border: 2px solid var(--primary);
-            color: #fff;
-        }
+    /* Process Section */
+    .process {
+        padding: 60px 0 !important;
+    }
 
-        .step-number.final {
-            background: var(--secondary);
-            color: #fff;
-        }
+    .process-steps {
+        flex-direction: column;
+        gap: 30px;
+    }
 
-        /* Contact Section */
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 50px;
-        }
+    .step-item {
+        min-width: 100%;
+    }
 
-        .whatsapp-link {
-            text-decoration: none;
-            color: #fff;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            transition: opacity 0.3s;
-        }
+    /* Contact Section */
+    .contact {
+        padding: 60px 0 !important;
+    }
 
-        .whatsapp-link:hover {
-            opacity: 0.8;
-        }
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
 
-        .whatsapp-icon-circle {
-            width: 50px;
-            height: 50px;
-            background: rgba(0, 243, 255, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--primary);
-        }
+    .contact-form {
+        padding: 30px 20px;
+    }
 
-        .contact-form {
-            background: var(--bg-card);
-            padding: 40px;
-            border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
+    /* CTA Section */
+    .cta {
+        padding: 60px 0;
+    }
 
-        .form-group {
-            margin-bottom: 20px;
-        }
+    .cta h2 {
+        font-size: 2rem;
+        line-height: 1.3;
+    }
 
-        .form-input {
-            width: 100%;
-            padding: 15px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            color: #fff;
-            outline: none;
-            transition: border-color 0.3s;
-        }
+    /* Footer */
+    footer {
+        padding: 40px 0;
+    }
 
-        .form-input:focus {
-            border-color: var(--primary);
-        }
+    .social-links a {
+        font-size: 1.3rem;
+        margin: 0 8px;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .section-title h2 {
+        font-size: 1.6rem;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    .service-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .pricing-card {
+        padding: 25px 20px;
+    }
+
+    .price {
+        font-size: 1.8rem;
+    }
+
+    .contact-form {
+        padding: 25px 15px;
+    }
+
+    .form-input {
+        padding: 12px;
+    }
+}
