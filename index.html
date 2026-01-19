@@ -22,9 +22,8 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <img src="assets/img/logo_tech.png" alt="Faudy_ZM"
-                        style="height: 50px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1);">
-                    <span style="font-size: 1.2rem; margin-left: 10px; vertical-align: middle;">Faudy_ZM</span>
+                    <img src="assets/img/logo_web_final.png" alt="Faudy_ZM"
+                        style="height: 100px; filter: drop-shadow(0 0 10px rgba(0, 243, 255, 0.4)); object-fit: contain;">
                 </div>
                 <div class="nav-links">
                     <a href="#inicio">Inicio</a>
@@ -33,27 +32,32 @@
                     <a href="#contacto" class="btn btn-primary" style="margin-left: 20px; color: white;">Cotizar
                         Proyecto</a>
                 </div>
-                <!-- Mobile Menu Icon (Hidden for now) -->
+                <!-- Mobile Menu Icon -->
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section id="inicio" class="hero" style="min-height: 100vh; display: flex; align-items: center; padding-top: 80px;">
-        <div class="container" style="display: flex; align-items: center; gap: 50px; flex-wrap: wrap;">
-            <div class="hero-content" style="flex: 1; min-width: 300px;">
-                <h1>Creamos sistemas y páginas web <span>que venden</span>, no solo que se ven bonitas.</h1>
-                <p>Transformamos ideas en activos digitales. Desarrollo Web, Sistemas Empresariales, Marketing y
+        <div class="container"
+            style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
+            <div class="hero-content" style="max-width: 800px; margin: 0 auto;">
+                <h1 style="font-size: 3.5rem; margin-bottom: 20px;">Creamos sistemas y páginas web diseñadas para
+                    generar ventas, optimizar procesos y aportar valor
+                    real a tu negocio.</h1>
+                <p style="font-size: 1.25rem; margin-bottom: 40px; color: var(--text-muted);">Transformamos ideas en
+                    activos digitales. Desarrollo Web, Sistemas Empresariales, Marketing y
                     Automatización, todo integrado para escalar tu empresa.</p>
-                <div class="hero-btns">
+                <div class="hero-btns" style="display: flex; justify-content: center; gap: 20px;">
                     <a href="https://wa.me/18294615951" target="_blank" class="btn btn-primary"><i
                             class="fab fa-whatsapp"></i> Hablar por WhatsApp</a>
                     <a href="#contacto" class="btn btn-outline"><i class="fas fa-envelope"></i> Solicitar cotización</a>
                 </div>
-            </div>
-            <div class="hero-image" style="flex: 1; min-width: 300px; display: flex; justify-content: center;">
-                <img src="assets/img/hero_faudy_new.png" alt="Faudy_ZM Presentación"
-                    style="max-width: 100%; height: auto; border-radius: 20px; box-shadow: 0 0 30px rgba(0, 243, 255, 0.2); border: 1px solid rgba(255,255,255,0.1);">
             </div>
         </div>
     </section>
@@ -117,22 +121,22 @@
                                 optimizadas para anuncios</li>
                         </ul>
                     </div>
-                    <!-- Service 4: Automatización -->
-                    <div class="service-card">
-                        <div class="card-content">
-                            <div class="icon"><i class="fas fa-robot"></i></div>
-                            <h3>Automatización</h3>
-                            <ul style="list-style: none; color: #a0a0a0; text-align: left; padding-left: 10px;">
-                                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i>
-                                    Formularios Inteligentes</li>
-                                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i>
-                                    Integración WhatsApp</li>
-                                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i>
-                                    Sistemas de Reservas</li>
-                                <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i>
-                                    Planificaciones Automáticas</li>
-                            </ul>
-                        </div>
+                </div>
+                <!-- Service 4: Automatización -->
+                <div class="service-card highlight">
+                    <div class="card-content">
+                        <div class="icon"><i class="fas fa-robot"></i></div>
+                        <h3>Automatización</h3>
+                        <ul style="list-style: none; color: #a0a0a0; text-align: left; padding-left: 10px;">
+                            <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i>
+                                Formularios Inteligentes</li>
+                            <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i>
+                                Integración WhatsApp</li>
+                            <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i>
+                                Sistemas de Reservas</li>
+                            <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i>
+                                Planificaciones Automáticas</li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -143,8 +147,12 @@
     <section id="planes" class="pricing" style="padding: 100px 0; background: rgba(0,0,0,0.2);">
         <div class="container">
             <div class="section-title">
-                <p>Inversión Transparente</p>
-                <h2>Planes diseñados para tu etapa</h2>
+                <p>Inversión transparente</p>
+                <h2>Elige el plan que mejor se ajusta a tus objetivos.</h2>
+                <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 800px; margin: 20px auto 0;">
+                    Cada negocio vive una etapa diferente. Nuestros planes están diseñados para acompañarte, crecer
+                    contigo y generar resultados reales.
+                </p>
             </div>
 
             <div class="pricing-grid"
@@ -156,20 +164,30 @@
                     <div style="color: var(--primary); font-size: 1.5rem; margin-bottom: 10px;"><i
                             class="fas fa-rocket"></i></div>
                     <h3 style="margin-bottom: 10px;">Plan Emprendedor</h3>
-                    <p style="color: #a0a0a0; font-size: 0.9rem; margin-bottom: 15px; min-height: 40px;">Ideal para
-                        negocios que están empezando y necesitan presencia digital YA.</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">
+                        Ideal para negocios que están empezando y necesitan verse profesionales desde hoy.
+                    </p>
+
                     <div class="price" style="font-size: 2.5rem; font-weight: 700; margin: 20px 0;">RD$10,000</div>
                     <ul
                         style="list-style: none; color: #a0a0a0; margin-bottom: 30px; text-align: left; padding: 0 10px;">
                         <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                style="color: var(--primary); margin-right: 8px;"></i> Web One Page</li>
+                                style="color: var(--primary); margin-right: 8px;"></i> Página web profesional (One Page)
+                        </li>
                         <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                style="color: var(--primary); margin-right: 8px;"></i> WhatsApp + Formulario</li>
-
+                                style="color: var(--primary); margin-right: 8px;"></i> Diseño personalizado según tu
+                            negocio
+                        </li>
                         <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                style="color: var(--primary); margin-right: 8px;"></i> Entrega 3-5 días</li>
+                                style="color: var(--primary); margin-right: 8px;"></i> Botón de WhatsApp + formulario de
+                            contacto
+                        </li>
                         <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                style="color: var(--primary); margin-right: 8px;"></i> SEO Básico + SSL</li>
+                                style="color: var(--primary); margin-right: 8px;"></i> Entrega rápida: 3–5 días</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                style="color: var(--primary); margin-right: 8px;"></i> SEO básico (Google te encuentra)
+                            + SSL (seguridad)
+                        </li>
                     </ul>
                     <a href="https://wa.me/18294615951?text=Me interesa el Plan Emprendedor" class="btn btn-outline"
                         style="width: 100%; margin: 0;">Elegir Plan</a>
@@ -180,30 +198,36 @@
                     style="background: var(--bg-card); padding: 40px; border-radius: 20px; border: 1px solid var(--primary); box-shadow: 0 0 20px rgba(0,243,255,0.1); text-align: center; position: relative; transform: scale(1.05);">
                     <div
                         style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary); color: #000; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;">
-                        MÁS VENDIDO</div>
+                        MÁS POPULAR</div>
                     <div style="color: var(--primary); font-size: 1.5rem; margin-bottom: 10px;"><i
                             class="fas fa-briefcase"></i></div>
                     <h3 style="margin-bottom: 10px;">Plan Negocio</h3>
-                    <p style="color: #a0a0a0; font-size: 0.9rem; margin-bottom: 15px; min-height: 40px;">Para negocios
-                        que quieren verse serios y generar contactos.</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">
+                        Ideal para negocios que ya están en marcha y quieren dar un salto profesional, atraer más
+                        clientes y verse sólidos.
+                    </p>
+
                     <div class="price" style="font-size: 2.5rem; font-weight: 700; margin: 20px 0;">RD$14,500</div>
                     <ul
                         style="list-style: none; color: #a0a0a0; margin-bottom: 30px; text-align: left; padding: 0 10px;">
                         <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                style="color: var(--primary); margin-right: 8px;"></i> Web Profesional (4 Secciones)
+                                style="color: var(--primary); margin-right: 8px;"></i> Web Completa (Inicio, Nosotros,
+                            Servicios, Contacto)</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                style="color: var(--primary); margin-right: 8px;"></i> Correos Corporativos
+                            (info@tuempresa.com)</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                style="color: var(--primary); margin-right: 8px;"></i> Mapa Inteligente y Redes
+                            Integradas</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                style="color: var(--primary); margin-right: 8px;"></i> Hosting y Dominio .com (Incluido
+                            1 año)</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                style="color: var(--primary); margin-right: 8px;"></i> Entrega: 10 a 20 días laborables
                         </li>
-                        <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                style="color: var(--primary); margin-right: 8px;"></i> Diseño Premium + Responsive</li>
-                        <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                style="color: var(--primary); margin-right: 8px;"></i> Formulario + Redes + WhatsApp
-                        </li>
-                        <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                style="color: var(--primary); margin-right: 8px;"></i> SEO Básico + SSL + Mapa</li>
-                        <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                style="color: var(--primary); margin-right: 8px;"></i> Config. Dominio y Hosting</li>
                     </ul>
                     <a href="https://wa.me/18294615951?text=Me interesa el Plan Negocio" class="btn btn-primary"
-                        style="width: 100%;">Elegir Plan</a>
+                        style="width: 100%;">Quiero verme Profesional</a>
                 </div>
 
                 <!-- Plan 3: Pro -->
@@ -212,30 +236,35 @@
                     <div style="color: var(--secondary); font-size: 1.5rem; margin-bottom: 10px;"><i
                             class="fas fa-gem"></i></div>
                     <h3 style="margin-bottom: 10px;">Plan Pro</h3>
-                    <p style="color: #a0a0a0; font-size: 0.9rem; margin-bottom: 15px; min-height: 40px;">Para empresas
-                        que necesitan funcionalidad, no solo presencia.</p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">
+                        Para marcas que quieren destacar, escalar y posicionarse como referentes en su sector.
+                    </p>
+
                     <div class="price" style="font-size: 2.5rem; font-weight: 700; margin: 20px 0;">RD$20,000</div>
                     <ul
                         style="list-style: none; color: #a0a0a0; margin-bottom: 30px; text-align: left; padding: 0 10px;">
                         <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                style="color: var(--secondary); margin-right: 8px;"></i> Sistema Web O Tienda Online
-                        </li>
+                                style="color: var(--secondary); margin-right: 8px;"></i> Tienda Online o Catálogo
+                            Completo</li>
                         <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                style="color: var(--secondary); margin-right: 8px;"></i> Panel Administrativo + Login
-                        </li>
+                                style="color: var(--secondary); margin-right: 8px;"></i> Panel Administrativo (Sube tus
+                            fotos/precios)</li>
                         <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                style="color: var(--secondary); margin-right: 8px;"></i> Gestión de Contenido /
-                            Productos</li>
+                                style="color: var(--secondary); margin-right: 8px;"></i> Pasarela de Pagos
+                            (Tarjetas/PayPal)</li>
                         <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                style="color: var(--secondary); margin-right: 8px;"></i> Diseño Responsive + SSL</li>
+                                style="color: var(--secondary); margin-right: 8px;"></i> Soporte Prioritario VIP</li>
                         <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                style="color: var(--secondary); margin-right: 8px;"></i> Soporte 15 días post-entrega
-                        </li>
+                                style="color: var(--secondary); margin-right: 8px;"></i> Capacitación de uso (Zoom
+                            grabado)</li>
+                        <li style="margin-bottom: 10px;"><i class="fas fa-check"
+                                style="color: var(--secondary); margin-right: 8px;"></i> Entrega: 10 a 20 días
+                            laborables</li>
                     </ul>
 
                     <a href="https://wa.me/18294615951?text=Me interesa el Plan Pro" class="btn btn-outline"
-                        style="width: 100%; margin: 0; border-color: var(--secondary); color: var(--secondary);">Elegir
-                        Plan</a>
+                        style="width: 100%; margin: 0; border-color: var(--secondary); color: var(--secondary);">Automatizar
+                        mi Negocio</a>
                 </div>
 
             </div>
@@ -280,7 +309,7 @@
                         style="background: rgba(255,255,255,0.03); padding: 35px; border-radius: 15px; border-left: 4px solid var(--primary); height: 100%;">
                         <h3 style="margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-shopping-bag"
                                 style="color: var(--primary); margin-right: 10px;"></i> Comercios</h3>
-                        <p style="font-size: 0.95rem; color: #bbb;">Tiendas, Minimarkets, Ferreterías, Farmacias.</p>
+                        <p style="font-size: 0.95rem; color: #bbb;">Tiendas, Mini markets, Ferreterías, entre otros.</p>
                     </div>
 
                     <!-- Alimentos -->
@@ -288,7 +317,8 @@
                         style="background: rgba(255,255,255,0.03); padding: 35px; border-radius: 15px; border-left: 4px solid var(--primary); height: 100%;">
                         <h3 style="margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-utensils"
                                 style="color: var(--primary); margin-right: 10px;"></i> Alimentos</h3>
-                        <p style="font-size: 0.95rem; color: #bbb;">Restaurantes, Pizzerías, Cafeterías.</p>
+                        <p style="font-size: 0.95rem; color: #bbb;">Restaurantes, pizzerías, cafeterías, food truck’s,
+                            entre otros.</p>
                     </div>
 
                     <!-- Salud -->
@@ -296,7 +326,8 @@
                         style="background: rgba(255,255,255,0.03); padding: 35px; border-radius: 15px; border-left: 4px solid var(--primary); height: 100%;">
                         <h3 style="margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-heartbeat"
                                 style="color: var(--primary); margin-right: 10px;"></i> Salud</h3>
-                        <p style="font-size: 0.95rem; color: #bbb;">Clínicas, Consultorios, Laboratorios, Estética.</p>
+                        <p style="font-size: 0.95rem; color: #bbb;">Clínicas, consultorios, laboratorios, farmacias,
+                            estéticas, entre otros.</p>
                     </div>
 
                     <!-- Educación -->
@@ -304,7 +335,8 @@
                         style="background: rgba(255,255,255,0.03); padding: 35px; border-radius: 15px; border-left: 4px solid var(--primary); height: 100%;">
                         <h3 style="margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-graduation-cap"
                                 style="color: var(--primary); margin-right: 10px;"></i> Educación</h3>
-                        <p style="font-size: 0.95rem; color: #bbb;">Colegios, Cursos online, Profesores, Institutos.</p>
+                        <p style="font-size: 0.95rem; color: #bbb;">Colegios, cursos online, instituciones, docentes,
+                            entre otros.</p>
                     </div>
                 </div>
             </div>
@@ -319,7 +351,8 @@
                         style="background: rgba(255,255,255,0.03); padding: 35px; border-radius: 15px; border-left: 4px solid var(--secondary); height: 100%;">
                         <h3 style="margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-briefcase"
                                 style="color: var(--secondary); margin-right: 10px;"></i> Servicios</h3>
-                        <p style="font-size: 0.95rem; color: #bbb;">Abogados, Ingenieros, Contadores.</p>
+                        <p style="font-size: 0.95rem; color: #bbb;">Abogados, administradores, contadores, ingenieros,
+                            entre otros.</p>
                     </div>
 
                     <!-- Mantenimiento -->
@@ -327,7 +360,8 @@
                         style="background: rgba(255,255,255,0.03); padding: 35px; border-radius: 15px; border-left: 4px solid var(--secondary); height: 100%;">
                         <h3 style="margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-cogs"
                                 style="color: var(--secondary); margin-right: 10px;"></i> Mantenimiento</h3>
-                        <p style="font-size: 0.95rem; color: #bbb;">Talleres, Lavaderos, Limpieza, Seguridad.</p>
+                        <p style="font-size: 0.95rem; color: #bbb;">Talleres, lavanderías, seguridad, limpieza
+                            doméstica, entre otros.</p>
                     </div>
 
                     <!-- Turismo -->
@@ -335,7 +369,8 @@
                         style="background: rgba(255,255,255,0.03); padding: 35px; border-radius: 15px; border-left: 4px solid var(--secondary); height: 100%;">
                         <h3 style="margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-plane"
                                 style="color: var(--secondary); margin-right: 10px;"></i> Turismo</h3>
-                        <p style="font-size: 0.95rem; color: #bbb;">Hoteles, Airbnb, Tours, Agencias, Bodas.</p>
+                        <p style="font-size: 0.95rem; color: #bbb;">Hoteles, airbnb, tours, agencias de viaje, entre
+                            otros.</p>
                     </div>
 
                     <!-- Creativos -->
@@ -343,7 +378,8 @@
                         style="background: rgba(255,255,255,0.03); padding: 35px; border-radius: 15px; border-left: 4px solid var(--secondary); height: 100%;">
                         <h3 style="margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-camera"
                                 style="color: var(--secondary); margin-right: 10px;"></i> Creativos</h3>
-                        <p style="font-size: 0.95rem; color: #bbb;">Diseñadores, Fotógrafos, Influencers, Artistas.</p>
+                        <p style="font-size: 0.95rem; color: #bbb;">Diseñadores, artistas, fotógrafos, Influencers,
+                            entre otros.</p>
                     </div>
                 </div>
             </div>
@@ -352,7 +388,7 @@
             <div style="text-align: center; margin-top: 60px;">
                 <p style="color: var(--text-main); font-size: 1.3rem; margin-bottom: 25px; font-weight: 500;">
                     ¿Tu negocio no está aquí? <span style="color: var(--primary); font-weight: 700;">👉 Lo adaptamos a
-                        tu sector</span>
+                        tu área</span>
                 </p>
                 <a href="#contacto" class="btn btn-primary"
                     style="padding: 15px 40px; font-size: 1.1rem; box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);">
@@ -369,7 +405,9 @@
     <section id="nosotros" class="why-us">
         <div class="container">
             <div class="section-title">
-                <h2>¿Por qué elegirnos?</h2>
+                <p style="color: var(--primary); font-weight: 700; letter-spacing: 2px; margin-bottom: 10px;">CLARO.
+                    PROFESIONAL. EFECTIVO.</p>
+                <h2>Nuestro Proceso de Trabajo</h2>
             </div>
             <div class="features-grid">
                 <div class="feature-item">
@@ -529,10 +567,10 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="logo" style="display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-                <img src="assets/img/logo_tech.png" alt="Faudy_ZM"
-                    style="height: 50px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.1); margin-right: 10px;">
-                <span style="font-size: 1.5rem; font-weight: bold;">Faudy_ZM</span>
+            <div class="logo"
+                style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 20px;">
+                <img src="assets/img/footer_shield.png" alt="Faudy_ZM"
+                    style="height: 100px; filter: drop-shadow(0 0 10px rgba(0, 243, 255, 0.4)); object-fit: contain;">
             </div>
             <div class="social-links">
                 <a href="#"><i class="fab fa-instagram"></i></a>

@@ -69,4 +69,50 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Optional: Add simple scroll animation reveal here if needed in future
+        
+        // Mobile Menu Toggle logic
+        const menuToggle = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        const header = document.querySelector('header');
+
+        if(menuToggle && navLinks) {
+            menuToggle.addEventListener('click', () => {
+                menuToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                
+                // Prevent scrolling when menu is open
+                document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : 'auto';
+            });
+
+            // Close menu when clicking a link
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    menuToggle.classList.remove('active');
+                    navLinks.classList.remove('active');
+                    document.body.style.overflow = 'auto'; // Restore scroll
+                });
+            });
+        }
+
+        // Scroll Animations with IntersectionObserver
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Animate only once
+                }
+            });
+        }, observerOptions);
+
+        // Select elements to animate
+        const elementsToAnimate = document.querySelectorAll('.service-card, .industry-card, .pricing-card, .section-title, .hero-content');
+        elementsToAnimate.forEach(el => {
+            el.classList.add('fade-in-up');
+            observer.observe(el);
+        });
     });
