@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faudy_ZM | Agencia de Soluciones Digitales</title>
+    <title>Agencia de Desarrollo Web y Marketing Digital | Fausha</title>
     <meta name="description"
-        content="Impulsa tu negocio con Desarrollo Web, Sistemas a medida, Publicidad y Automatización.">
+        content="Diseño de páginas web, sistemas a medida y automatización de negocios en República Dominicana. Convierte visitas en clientes con Fausha. ¡Cotiza hoy!">
+    <link rel="icon" href="assets/img/logo_shield_ultimate.png" type="image/png">
 
     <!-- Fonts & Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts managed in CSS import now -->
 
     <!-- Styles -->
     <link rel="stylesheet" href="assets/css/style.css">
@@ -22,8 +24,8 @@
         <div class="container">
             <nav>
                 <div class="logo">
-                    <img src="assets/img/logo_web_final.png" alt="Faudy_ZM"
-                        style="height: 100px; filter: drop-shadow(0 0 10px rgba(0, 243, 255, 0.4)); object-fit: contain;">
+                    <img src="assets/img/logo_header_final.png" alt="Faudy_ZM" class="logo-img"
+                        style="height: 60px; object-fit: contain;">
                 </div>
                 <div class="nav-links">
                     <a href="#inicio">Inicio</a>
@@ -43,20 +45,44 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="hero" style="min-height: 100vh; display: flex; align-items: center; padding-top: 80px;">
-        <div class="container"
-            style="display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;">
-            <div class="hero-content" style="max-width: 800px; margin: 0 auto;">
-                <h1 style="font-size: 3.5rem; margin-bottom: 20px;">Creamos sistemas y páginas web diseñadas para
-                    generar ventas, optimizar procesos y aportar valor
-                    real a tu negocio.</h1>
-                <p style="font-size: 1.25rem; margin-bottom: 40px; color: var(--text-muted);">Transformamos ideas en
-                    activos digitales. Desarrollo Web, Sistemas Empresariales, Marketing y
-                    Automatización, todo integrado para escalar tu empresa.</p>
-                <div class="hero-btns" style="display: flex; justify-content: center; gap: 20px;">
-                    <a href="https://wa.me/18294615951" target="_blank" class="btn btn-primary"><i
-                            class="fab fa-whatsapp"></i> Hablar por WhatsApp</a>
-                    <a href="#contacto" class="btn btn-outline"><i class="fas fa-envelope"></i> Solicitar cotización</a>
+    <section id="inicio" class="hero">
+        <div class="container text-center">
+            <div class="hero-content" style="max-width: 900px; margin: 0 auto;">
+
+                <h1 class="h1-hero fade-in-up">
+                    Transformamos tu Negocio en una <span class="text-primary">Máquina Digital</span>
+                </h1>
+
+                <p class="fade-in-up"
+                    style="font-size: 1.25rem; color: var(--text-muted); margin-bottom: 40px; max-width: 750px; margin-left: auto; margin-right: auto;">
+                    Desarrollo Web de alto impacto, Automatización y Estrategias que sí venden.
+                    Deja de tener una web "bonita" y empieza a tener un <strong>activo que factura</strong>.
+                </p>
+
+                <div class="hero-btns fade-in-up"
+                    style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <a href="https://wa.me/18294615951?text=Hola,%20quiero%20digitalizar%20mi%20negocio."
+                        target="_blank" class="btn btn-accent">
+                        <i class="fab fa-whatsapp"></i> Hablar con un Experto
+                    </a>
+                    <a href="#proceso" class="btn btn-outline">
+                        <i class="fas fa-eye"></i> Ver Cómo Trabajamos
+                    </a>
+                </div>
+
+                <!-- Trust Badges / Social Proof Placeholder -->
+                <div style="margin-top: 60px; opacity: 0.7;">
+                    <p
+                        style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: #555; margin-bottom: 20px;">
+                        Tecnología que usamos
+                    </p>
+                    <div style="font-size: 2rem; color: #444; display: flex; justify-content: center; gap: 30px;">
+                        <i class="fab fa-wordpress"></i>
+                        <i class="fab fa-react"></i>
+                        <i class="fab fa-php"></i>
+                        <i class="fab fa-js"></i>
+                        <i class="fas fa-database"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -129,13 +155,11 @@
                         <h3>Automatización</h3>
                         <ul style="list-style: none; color: #a0a0a0; text-align: left; padding-left: 10px;">
                             <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i>
-                                Formularios Inteligentes</li>
+                                Bots de WhatsApp</li>
                             <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i>
-                                Integración WhatsApp</li>
+                                Reservas Automáticas</li>
                             <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i>
-                                Sistemas de Reservas</li>
-                            <li><i class="fas fa-check" style="color: var(--primary); margin-right: 8px;"></i>
-                                Planificaciones Automáticas</li>
+                                Email Marketing</li>
                         </ul>
                     </div>
                 </div>
@@ -144,7 +168,7 @@
     </section>
 
     <!-- Pricing Section -->
-    <section id="planes" class="pricing" style="padding: 100px 0; background: rgba(0,0,0,0.2);">
+    <section id="planes" class="pricing">
         <div class="container">
             <div class="section-title">
                 <p>Inversión transparente</p>
@@ -155,8 +179,7 @@
                 </p>
             </div>
 
-            <div class="pricing-grid"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+            <div class="pricing-grid">
 
                 <!-- Plan 1: Emprendedor -->
                 <div class="pricing-card"
@@ -207,7 +230,7 @@
                         clientes y verse sólidos.
                     </p>
 
-                    <div class="price" style="font-size: 2.5rem; font-weight: 700; margin: 20px 0;">RD$14,500</div>
+                    <div class="price" style="font-size: 2.5rem; font-weight: 700; margin: 20px 0;">RD$15,000</div>
                     <ul
                         style="list-style: none; color: #a0a0a0; margin-bottom: 30px; text-align: left; padding: 0 10px;">
                         <li style="margin-bottom: 10px;"><i class="fas fa-check"
@@ -237,34 +260,26 @@
                             class="fas fa-gem"></i></div>
                     <h3 style="margin-bottom: 10px;">Plan Pro</h3>
                     <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">
-                        Para marcas que quieren destacar, escalar y posicionarse como referentes en su sector.
+                        Para marcas que quieren liderar su sector.
                     </p>
 
                     <div class="price" style="font-size: 2.5rem; font-weight: 700; margin: 20px 0;">RD$20,000</div>
                     <ul
                         style="list-style: none; color: #a0a0a0; margin-bottom: 30px; text-align: left; padding: 0 10px;">
                         <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                style="color: var(--secondary); margin-right: 8px;"></i> Tienda Online o Catálogo
-                            Completo</li>
+                                style="color: var(--secondary); margin-right: 8px;"></i> <strong>Tienda Online
+                                Completa</strong></li>
                         <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                style="color: var(--secondary); margin-right: 8px;"></i> Panel Administrativo (Sube tus
-                            fotos/precios)</li>
+                                style="color: var(--secondary); margin-right: 8px;"></i> Panel Administrativo</li>
                         <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                style="color: var(--secondary); margin-right: 8px;"></i> Pasarela de Pagos
-                            (Tarjetas/PayPal)</li>
+                                style="color: var(--secondary); margin-right: 8px;"></i> Pagos con Tarjeta/PayPal</li>
                         <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                style="color: var(--secondary); margin-right: 8px;"></i> Soporte Prioritario VIP</li>
-                        <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                style="color: var(--secondary); margin-right: 8px;"></i> Capacitación de uso (Zoom
-                            grabado)</li>
-                        <li style="margin-bottom: 10px;"><i class="fas fa-check"
-                                style="color: var(--secondary); margin-right: 8px;"></i> Entrega: 10 a 20 días
-                            laborables</li>
+                                style="color: var(--secondary); margin-right: 8px;"></i> Soporte VIP 24/7</li>
                     </ul>
 
                     <a href="https://wa.me/18294615951?text=Me interesa el Plan Pro" class="btn btn-outline"
                         style="width: 100%; margin: 0; border-color: var(--secondary); color: var(--secondary);">Automatizar
-                        mi Negocio</a>
+                        Todo</a>
                 </div>
 
             </div>
@@ -284,7 +299,7 @@
     </section>
 
     <!-- Industries Section -->
-    <section id="sectores" class="industries" style="padding: 120px 0;">
+    <section id="sectores" class="industries">
         <div class="container">
             <!-- 1. Centered 3-Level Header -->
             <div class="section-title" style="text-align: center; margin-bottom: 80px;">
@@ -299,89 +314,74 @@
 
             <!-- 2 & 3. Grouped Rows with Color Coding -->
 
-            <!-- Row 1: Negocios Tradicionales (Cyan / Primary) -->
-            <div class="industries-row" style="margin-bottom: 50px;">
-                <div class="grid-container"
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px;">
+            <!-- Compact Grid -->
+            <div class="industries-grid"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
 
-                    <!-- Comercios -->
-                    <div class="industry-card"
-                        style="background: rgba(255,255,255,0.03); padding: 35px; border-radius: 15px; border-left: 4px solid var(--primary); height: 100%;">
-                        <h3 style="margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-shopping-bag"
-                                style="color: var(--primary); margin-right: 10px;"></i> Comercios</h3>
-                        <p style="font-size: 0.95rem; color: #bbb;">Tiendas, Mini markets, Ferreterías, entre otros.</p>
-                    </div>
-
-                    <!-- Alimentos -->
-                    <div class="industry-card"
-                        style="background: rgba(255,255,255,0.03); padding: 35px; border-radius: 15px; border-left: 4px solid var(--primary); height: 100%;">
-                        <h3 style="margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-utensils"
-                                style="color: var(--primary); margin-right: 10px;"></i> Alimentos</h3>
-                        <p style="font-size: 0.95rem; color: #bbb;">Restaurantes, pizzerías, cafeterías, food truck’s,
-                            entre otros.</p>
-                    </div>
-
-                    <!-- Salud -->
-                    <div class="industry-card"
-                        style="background: rgba(255,255,255,0.03); padding: 35px; border-radius: 15px; border-left: 4px solid var(--primary); height: 100%;">
-                        <h3 style="margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-heartbeat"
-                                style="color: var(--primary); margin-right: 10px;"></i> Salud</h3>
-                        <p style="font-size: 0.95rem; color: #bbb;">Clínicas, consultorios, laboratorios, farmacias,
-                            estéticas, entre otros.</p>
-                    </div>
-
-                    <!-- Educación -->
-                    <div class="industry-card"
-                        style="background: rgba(255,255,255,0.03); padding: 35px; border-radius: 15px; border-left: 4px solid var(--primary); height: 100%;">
-                        <h3 style="margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-graduation-cap"
-                                style="color: var(--primary); margin-right: 10px;"></i> Educación</h3>
-                        <p style="font-size: 0.95rem; color: #bbb;">Colegios, cursos online, instituciones, docentes,
-                            entre otros.</p>
-                    </div>
+                <!-- Comercios -->
+                <div class="industry-card primary">
+                    <div style="font-size: 2rem; color: var(--primary); margin-bottom: 10px;"><i
+                            class="fas fa-shopping-bag"></i></div>
+                    <h3>Comercios</h3>
+                    <p style="font-size: 0.9rem; color: #aaa;">Tiendas, Minimarkets</p>
                 </div>
-            </div>
 
-            <!-- Row 2: Servicios Especializados (Purple / Secondary) -->
-            <div class="industries-row" style="margin-bottom: 60px;">
-                <div class="grid-container"
-                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px;">
-
-                    <!-- Servicios -->
-                    <div class="industry-card"
-                        style="background: rgba(255,255,255,0.03); padding: 35px; border-radius: 15px; border-left: 4px solid var(--secondary); height: 100%;">
-                        <h3 style="margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-briefcase"
-                                style="color: var(--secondary); margin-right: 10px;"></i> Servicios</h3>
-                        <p style="font-size: 0.95rem; color: #bbb;">Abogados, administradores, contadores, ingenieros,
-                            entre otros.</p>
-                    </div>
-
-                    <!-- Mantenimiento -->
-                    <div class="industry-card"
-                        style="background: rgba(255,255,255,0.03); padding: 35px; border-radius: 15px; border-left: 4px solid var(--secondary); height: 100%;">
-                        <h3 style="margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-cogs"
-                                style="color: var(--secondary); margin-right: 10px;"></i> Mantenimiento</h3>
-                        <p style="font-size: 0.95rem; color: #bbb;">Talleres, lavanderías, seguridad, limpieza
-                            doméstica, entre otros.</p>
-                    </div>
-
-                    <!-- Turismo -->
-                    <div class="industry-card"
-                        style="background: rgba(255,255,255,0.03); padding: 35px; border-radius: 15px; border-left: 4px solid var(--secondary); height: 100%;">
-                        <h3 style="margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-plane"
-                                style="color: var(--secondary); margin-right: 10px;"></i> Turismo</h3>
-                        <p style="font-size: 0.95rem; color: #bbb;">Hoteles, airbnb, tours, agencias de viaje, entre
-                            otros.</p>
-                    </div>
-
-                    <!-- Creativos -->
-                    <div class="industry-card"
-                        style="background: rgba(255,255,255,0.03); padding: 35px; border-radius: 15px; border-left: 4px solid var(--secondary); height: 100%;">
-                        <h3 style="margin-bottom: 15px; font-size: 1.4rem;"><i class="fas fa-camera"
-                                style="color: var(--secondary); margin-right: 10px;"></i> Creativos</h3>
-                        <p style="font-size: 0.95rem; color: #bbb;">Diseñadores, artistas, fotógrafos, Influencers,
-                            entre otros.</p>
-                    </div>
+                <!-- Alimentos -->
+                <div class="industry-card primary">
+                    <div style="font-size: 2rem; color: var(--primary); margin-bottom: 10px;"><i
+                            class="fas fa-utensils"></i></div>
+                    <h3>Alimentos</h3>
+                    <p style="font-size: 0.9rem; color: #aaa;">Restaurantes, Cafeterías</p>
                 </div>
+
+                <!-- Salud -->
+                <div class="industry-card primary">
+                    <div style="font-size: 2rem; color: var(--primary); margin-bottom: 10px;"><i
+                            class="fas fa-heartbeat"></i></div>
+                    <h3>Salud</h3>
+                    <p style="font-size: 0.9rem; color: #aaa;">Clínicas, Farmacias</p>
+                </div>
+
+                <!-- Educación -->
+                <div class="industry-card primary">
+                    <div style="font-size: 2rem; color: var(--primary); margin-bottom: 10px;"><i
+                            class="fas fa-graduation-cap"></i></div>
+                    <h3>Educación</h3>
+                    <p style="font-size: 0.9rem; color: #aaa;">Colegios, Cursos</p>
+                </div>
+
+                <!-- Servicios -->
+                <div class="industry-card secondary">
+                    <div style="font-size: 2rem; color: var(--secondary); margin-bottom: 10px;"><i
+                            class="fas fa-briefcase"></i></div>
+                    <h3>Servicios</h3>
+                    <p style="font-size: 0.9rem; color: #aaa;">Abogados, Contadores</p>
+                </div>
+
+                <!-- Mantenimiento -->
+                <div class="industry-card secondary">
+                    <div style="font-size: 2rem; color: var(--secondary); margin-bottom: 10px;"><i
+                            class="fas fa-cogs"></i></div>
+                    <h3>Oficios</h3>
+                    <p style="font-size: 0.9rem; color: #aaa;">Talleres, Limpieza</p>
+                </div>
+
+                <!-- Turismo -->
+                <div class="industry-card secondary">
+                    <div style="font-size: 2rem; color: var(--secondary); margin-bottom: 10px;"><i
+                            class="fas fa-plane"></i></div>
+                    <h3>Turismo</h3>
+                    <p style="font-size: 0.9rem; color: #aaa;">Hoteles, Airbnb</p>
+                </div>
+
+                <!-- Creativos -->
+                <div class="industry-card secondary">
+                    <div style="font-size: 2rem; color: var(--secondary); margin-bottom: 10px;"><i
+                            class="fas fa-camera"></i></div>
+                    <h3>Creativos</h3>
+                    <p style="font-size: 0.9rem; color: #aaa;">Artistas, Influencers</p>
+                </div>
+
             </div>
 
             <!-- 5. Centered CTA at Bottom -->
@@ -531,7 +531,8 @@
 
                     <div class="social-links" style="margin-top: 40px; text-align: left;">
                         <p style="margin-bottom: 15px; color: var(--text-muted);">Síguenos en redes:</p>
-                        <a href="#" style="font-size: 1.5rem; margin-right: 20px; color: #fff;"><i
+                        <a href="https://www.instagram.com/faudyzm_web?igsh=MXVpNGpnbjBuZnVkbA==" target="_blank"
+                            style="font-size: 1.5rem; margin-right: 20px; color: #fff;"><i
                                 class="fab fa-instagram"></i></a>
                         <a href="#" style="font-size: 1.5rem; margin-right: 20px; color: #fff;"><i
                                 class="fab fa-facebook"></i></a>
@@ -545,19 +546,20 @@
                     style="background: var(--bg-card); padding: 40px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05);">
                     <form action="#" method="POST">
                         <div style="margin-bottom: 20px;">
-                            <input type="text" placeholder="Tu Nombre"
+                            <input type="text" placeholder="Tu Nombre o Empresa"
                                 style="width: 100%; padding: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: #fff; outline: none;">
                         </div>
                         <div style="margin-bottom: 20px;">
-                            <input type="tel" placeholder="Tu WhatsApp"
+                            <input type="tel" placeholder="Tu WhatsApp (Importante)"
                                 style="width: 100%; padding: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: #fff; outline: none;">
                         </div>
                         <div style="margin-bottom: 20px;">
-                            <textarea placeholder="¿Qué necesitas?" rows="4"
+                            <textarea placeholder="Cuéntanos brevemente sobre tu proyecto..." rows="4"
                                 style="width: 100%; padding: 15px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; color: #fff; outline: none;"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%; border: none;">Enviar
-                            Mensaje</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; border: none;">
+                            <i class="fab fa-whatsapp"></i> Iniciar Chat de Cotización
+                        </button>
                     </form>
                 </div>
             </div>
@@ -569,18 +571,25 @@
         <div class="container">
             <div class="logo"
                 style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-bottom: 20px;">
-                <img src="assets/img/footer_shield.png" alt="Faudy_ZM"
-                    style="height: 100px; filter: drop-shadow(0 0 10px rgba(0, 243, 255, 0.4)); object-fit: contain;">
+                <img src="assets/img/logo_shield_ultimate.png" alt="Faudy_ZM" class="logo-img"
+                    style="height: 100px; object-fit: contain;">
             </div>
             <div class="social-links">
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.instagram.com/faudyzm_web?igsh=MXVpNGpnbjBuZnVkbA==" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/18294615951"><i class="fab fa-whatsapp"></i></a>
                 <a href="#"><i class="fab fa-linkedin"></i></a>
             </div>
             <p style="margin-top: 20px; font-size: 0.8rem; color: #555;">&copy; 2024 Faudy_ZM. Todos los derechos
                 reservados.</p>
         </div>
     </footer>
+
+    <!-- Sticky WhatsApp -->
+    <a href="https://wa.me/18294615951?text=Hola,%20vi%20su%20web%20y%20me%20interesa." class="sticky-whatsapp"
+        target="_blank" aria-label="Chat en WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <!-- Scripts -->
     <script src="assets/js/main.js"></script>
